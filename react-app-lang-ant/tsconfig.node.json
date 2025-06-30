@@ -23,7 +23,6 @@
 
     /* Recommended additions */
     "isolatedModules": true,
-    "importsNotUsedAsValues": "error"
   },
   "include": ["vite.config.ts"]
 }

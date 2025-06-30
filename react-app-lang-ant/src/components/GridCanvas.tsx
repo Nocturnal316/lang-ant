@@ -47,7 +47,7 @@ export default function GridCanvas({ grid, clientId, color, onCellClick, onPlace
   };
 
   return (
-    <div>
+    <div className="overflow-x-auto">
       <p>Click to flip your tile. Shift+Click to place ant.</p>
       <canvas
         ref={canvasRef}

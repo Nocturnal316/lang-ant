@@ -41,6 +41,8 @@ function broadcast(message) {
  */
 function stepSimulation() {
   for (const [clientId, ant] of Object.entries(ANTS)) {
+    //Iterate over each ant
+    //grab their position according to hashmap x,y
     const key = `${ant.x},${ant.y}`;
     const cell = GRID[key];
     const ownerColor = cell?.ownerId === clientId ? cell.color : "white";
@@ -98,10 +100,17 @@ wss.on("connection", (ws) => {
       // Handle setting rules for the ant
       // Make sure set only by correct client id
       if (type === "setRules") {
+        const filtered = {};
+        for (const key in payload) {
+          if (key === "white" || key === color) {
+            filtered[key] = payload[key];
+          }
+        }
+
         if (ANTS[clientId]) {
-          ANTS[clientId].rules = payload;
+          ANTS[clientId].rules = filtered;
         } else {
-          ANTS[clientId] = { x: 50, y: 50, dir: 0, color, rules: payload };
+          ANTS[clientId] = { x: 50, y: 50, dir: 0, color, rules: filtered };
         }
       }
     } catch (err) {
