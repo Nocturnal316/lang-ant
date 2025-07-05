@@ -57,3 +57,7 @@ npm run dev
 Ant Rule Evaluation:
 Each ant evaluates only the tile it is currently on. It does not consider adjacent tiles when deciding its turn. 
 This ensures that each move follows the classic Langton’s Ant rules, even in multiplayer with independently defined color flips.
+
+Here is a link to the write up 
+
+https://docs.google.com/document/d/1iggDYGcc_aINO-mU3x8uSg6e9ycFFAFfqJj54Xn5ZBo/edit?usp=sharing
