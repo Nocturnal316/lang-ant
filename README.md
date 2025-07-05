@@ -26,7 +26,7 @@ This project extends that concept to a **multiplayer web application**:
 
 #### 1️⃣ Clone the repo
 ```bash
-git clone https://github.com/yourusername/langtons-ant-multiplayer.git
+git clone https://github.com/Nocturnal316/lang-ant.git
 cd langtons-ant-multiplayer
 ```
 
